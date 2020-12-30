@@ -39,7 +39,7 @@ def main():
         col1, col2 = st.beta_columns(2)
 
         # list of filters
-        filters = st.sidebar.radio("Filters", ["Original", "Grayscale", "Draw", "Sepia", "Blur", "Canny", "Contrast"])
+        filters = st.sidebar.radio("Filters", ["Original", "Grayscale", "Drawing", "Sepia", "Blur", "Canny", "Contrast"])
 
         if filters == "Grayscale":
             converted_image = np.array(our_image.convert('RGB'))
@@ -50,7 +50,7 @@ def main():
             col2.header("Grayscale")
             col2.image(gray_image, use_column_width=True)
 
-        elif filters == "Draw":
+        elif filters == "Drawing":
             converted_image = np.array(our_image.convert("RGB"))
             gray_image = cv2.cvtColor(converted_image, cv2.COLOR_RGB2GRAY)
             inv_gray_image = 255 - gray_image
@@ -59,7 +59,7 @@ def main():
 
             col1.header("Original")
             col1.image(our_image, use_column_width=True)
-            col2.header("Desenho")
+            col2.header("Drawing")
             col2.image(sketch_image, use_column_width=True)
 
         elif filters == "Sepia":
