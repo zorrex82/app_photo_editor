@@ -27,6 +27,23 @@ If you can, please contribute and share your knowledge.
   <img src="screenshot3.png" >
 </p>
 
+**How to proceed to running this app**
+
+First install the dependencies
+
+``` python
+
+pip install -r requirements.txt
+
+```
+Then run the project with the command bellow
+
+```python
+
+streamlit run main.py
+
+```
+
 **Links:**
 * [LinkedIn](https://www.linkedin.com/in/edinorjr)
 * [Opencv](https://opencv.org/)
